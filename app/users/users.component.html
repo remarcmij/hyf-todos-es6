@@ -1,0 +1,4 @@
+<md-list>
+  <hyf-user-item ng-repeat="user in $ctrl.users track by user._id" user="user"
+                 on-delete="$ctrl.onDelete(id, ev)"></hyf-user-item>
+</md-list>

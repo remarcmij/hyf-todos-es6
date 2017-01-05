@@ -1,0 +1,6 @@
+<md-list>
+  <md-list-item ng-repeat="user in $ctrl.users track by user._id">
+    <md-checkbox ng-model="user.selected" aria-label="Select user"></md-checkbox>
+    <p> {{$ctrl.user.name}}</p>
+  </md-list-item>
+</md-list>

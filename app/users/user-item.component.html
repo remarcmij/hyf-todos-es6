@@ -1,0 +1,12 @@
+<md-list-item>
+  <p> {{$ctrl.user.name}}</p>
+  <md-icon md-font-set="material-icons" ng-click="$ctrl.showTodos($event)" aria-label="Show assigned todos"
+           class="md-secondary md-hue-3">assignment
+  </md-icon>
+  <md-icon md-font-set="material-icons" ng-click="$ctrl.editUser($event)" aria-label="Show assigned todos"
+           class="md-secondary md-hue-3">edit_mode
+  </md-icon>
+  <md-icon class="md-secondary md-warn" md-font-set="material-icons" ng-click="$ctrl.deleteUser($event)"
+           aria-label="Delete todo">delete
+  </md-icon>
+</md-list-item>

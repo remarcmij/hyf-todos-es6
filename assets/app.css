@@ -1,0 +1,20 @@
+.placeholder-text {
+  color: darkgray;
+  font-style: italic;
+}
+
+.todo-done {
+  text-decoration: line-through;
+}
+
+.text-muted {
+  color: darkgray;
+}
+
+.md-button.md-fab.md-fab-bottom-right {
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: fixed;
+}

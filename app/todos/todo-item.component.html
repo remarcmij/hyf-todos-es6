@@ -1,0 +1,13 @@
+<md-list-item>
+  <md-checkbox ng-model="$ctrl.todo.done" ng-change="$ctrl.doneChanged($event)" aria-label="Toggle done"></md-checkbox>
+  <p ng-class="{'todo-done': $ctrl.todo.done}">{{$ctrl.todo.text}}</p>
+  <md-icon md-font-set="material-icons" ng-click="$ctrl.showUsers($event)" aria-label="Show assigned users"
+           class="md-secondary md-hue-3">person
+  </md-icon>
+  <md-icon class="md-secondary" md-font-set="material-icons" ng-click="$ctrl.editTodo($event)"
+           aria-label="Edit todo">mode_edit
+  </md-icon>
+  <md-icon class="md-secondary md-warn" md-font-set="material-icons" ng-click="$ctrl.deleteTodo($event)"
+           aria-label="Delete todo">delete
+  </md-icon>
+</md-list-item>

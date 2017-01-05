@@ -1,0 +1,7 @@
+<md-list-item>
+  <p ng-class="{'text-muted': !$ctrl.assigned, 'todo-done': $ctrl.todo.done}">{{$ctrl.todo.text}}</p>
+  <md-button class="md-secondary md-icon-button" ng-click="$ctrl.toggleAssignment($event)" aria-label="Toggle assigment">
+    <md-icon ng-if="!$ctrl.assigned" class="text-muted" md-font-set="material-icons">assignment</md-icon>
+    <md-icon class="md-accent" ng-if="$ctrl.assigned" md-font-set="material-icons">assignment_ind</md-icon>
+  </md-button>
+</md-list-item>

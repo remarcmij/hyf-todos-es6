@@ -1,0 +1,23 @@
+<div flex layout="column" layout-fill>
+  <md-toolbar class="md-whiteframe-2dp">
+    <div class="md-toolbar-tools">
+      <h2>{{$ctrl.appTitle}}</h2>
+    </div>
+  </md-toolbar>
+
+  <md-content flex>
+    <md-tabs md-dynamic-height md-border-bottom flex-offset-gt-sm="20" flex-gt-sm="60"
+             md-selected="$ctrl.selectedIndex">
+      <md-tab label="todo">
+        <hyf-todos></hyf-todos>
+      </md-tab>
+      <md-tab label="users">
+        <hyf-users></hyf-users>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+
+  <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="$ctrl.addItem($event)">
+    <md-icon md-font-set="material-icons">add</md-icon>
+  </md-button>
+</div>
