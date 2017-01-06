@@ -1,4 +1,4 @@
-# HYF-TODOS
+# HYF-TODOS-ES6
 
 ### A reference application for the *Hack Your Future* refugee training programme
 
@@ -49,7 +49,3 @@ http://localhost:8080
 The application's main screen consist of two tabs, viz. TODOS and USERS. The plus button on the toolbar enables todos and users to be added, depending on the active tab.
 
 Users and todos can be edited by means of the pencil button and deleted with the trashcan button. Todos can be assigned to users and unassigned. Todos can be marked completed.
-
-
-
-

@@ -1,10 +1,10 @@
+'use strict';
 import angular from 'angular';
 
 import './todos.component';
 import './todo-item.component';
 import './todo-users.component';
 import './todo-users-item.component';
-// import './unassigned-users.component';
 
 angular.module('app')
     .config(routing);

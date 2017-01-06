@@ -1,3 +1,4 @@
+'use strict';
 import angular from 'angular';
 import 'angular-aria';
 import 'angular-animate';

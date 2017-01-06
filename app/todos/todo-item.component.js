@@ -1,3 +1,4 @@
+'use strict';
 import angular from 'angular';
 
 const template = require('./todo-item.component.html');
@@ -53,7 +54,7 @@ class TodoItemController {
 
 angular.module('app')
     .component('hyfTodoItem', {
-        templateUrl: 'app/todos/todo-item.component.html',
+        template,
         bindings: {
             todo: '<',
             onDelete: '&'

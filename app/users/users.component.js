@@ -1,3 +1,4 @@
+'use strict';
 import angular from 'angular';
 
 const template = require('./users.component.html');
