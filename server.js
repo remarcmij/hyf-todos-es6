@@ -8,11 +8,20 @@ let app = null;
 let dbname = null;
 let database = null;
 
-setupDatabase();
-setupExpress();
-setupApiEndPointRoutes();
-setupStaticRoutes();
-startServer();
+run();
+
+function run() {
+    try {
+        setupDatabase();
+        setupExpress();
+        setupApiEndPointRoutes();
+        setupStaticRoutes();
+        startServer();
+    } catch(err) {
+        console.log(err);
+        process.exit();
+    }
+}
 
 function setupDatabase() {
     let dbtype;
@@ -28,8 +37,7 @@ function setupDatabase() {
         password = process.argv[3];
         dbname = (argLen >= 5 && process.argv[4] === 'test') ? 'hyf-todos-test' : 'hyf-todos';
     } else {
-        console.log('to run, type: node database.js mongo [test]| mysql <password> [test]');
-        process.exit();
+        throw new Error('invalid command line: to run, type: node database.js mongo [test]| mysql <password> [test]');
     }
 
     switch (dbtype) {
@@ -82,10 +90,9 @@ function setupStaticRoutes() {
 }
 
 function startServer() {
-    app.listen(PORT, (err) => {
+    app.listen(PORT, err => {
         if (err) {
-            console.log('could no start server: ', err);
-            process.exit(1);
+            throw err;
         }
         console.log('server listening at port ' + PORT);
     });
