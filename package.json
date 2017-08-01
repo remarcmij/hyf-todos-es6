@@ -5,7 +5,7 @@
   "main": "todosServer.js",
   "scripts": {
     "start": "node ./server.js mongo",
-    "webpack": "webpack --progress --colors --watch",
+    "build": "webpack --progress --colors --watch",
     "test": "nodemon --exec 'mocha -R min'"
   },
   "author": "",

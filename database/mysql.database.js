@@ -169,10 +169,8 @@ function unassignUserFromTodo(userId, todoId) {
     return execQuery('DELETE FROM todo_user_links WHERE user_id=? AND todo_id=?', [userId, todoId]);
 }
 
-function execQuery(sql, args) {
-    args = args || [];
+function execQuery(sql, args = []) {
     return new Promise((resolve, reject) => {
-        args = args || [];
         connection.query(sql, args, (err, rows) => {
             if (err) {
                 reject(err);
